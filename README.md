@@ -1,2 +1,2 @@
 # project-uas
-membuat program stack
+membuat program stack dan sorting(insertionsort)
