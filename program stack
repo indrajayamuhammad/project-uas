@@ -1,0 +1,49 @@
+from collections import deque
+
+# Data awal
+stack = deque([20, 24, 26, 28, 30, 32])
+
+def show_data():
+    print("\nData saat ini:", list(stack))
+    print("==============================")
+
+while True:
+    show_data()  # tampilkan di atas menu
+
+    print("=== MENU STACK ===")
+    print("1. append")
+    print("2. appendleft")
+    print("3. pop")
+    print("4. popleft")
+    print("5. clear")
+    print("6. keluar")
+
+    pilihan = input("Pilih menu (1-6): ")
+
+    if pilihan == "1":
+        nilai = input("Masukkan nilai untuk append: ")
+        stack.append(int(nilai))
+
+    elif pilihan == "2":
+        nilai = input("Masukkan nilai untuk appendleft: ")
+        stack.appendleft(int(nilai))
+
+    elif pilihan == "3":
+        if stack:
+            print("Data yang di-pop:", stack.pop())
+        else:
+            print("Stack kosong!")
+
+    elif pilihan == "4":
+        if stack:
+            print("Data yang di-popleft:", stack.popleft())
+        else:
+            print("Stack kosong!")
+
+    elif pilihan == "5":
+        stack.clear()
+        print("Stack telah di-clear.")
+
+    elif pilihan == "6":
+        print("Keluar dari program.")
+        break
